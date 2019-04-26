@@ -8,6 +8,6 @@ RUN mkdir -p /root/executables
 COPY docker_context/executables /root/executables
 
 WORKDIR /root/executables
-
+ENTRYPOINT [ "/root/executables/server" ]
 
 

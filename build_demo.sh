@@ -21,17 +21,19 @@ cd ..
 
 docker swarm init
 
-# sudo docker service create -d -t --privileged \
-#     --name demo_container \
-#     --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
-#     class_wrapper 
+sudo docker service create  \
+    --name demo_container \
+    --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
+    -p 8080:8080  \
+    class_wrapper \
+    -d -t --privileged -e ALLOWED_NETWORKS=0.0.0.0/0 
 
 
 #start up the webshell
 docker build -t webshell webshell/.
 sudo docker service create \
     --name webshell \
-    -p 8018:80 -p 8080:8080 -p8000-8000 webshell:latest \
+    -p 8888:80 webshell:latest \
     -d --privileged --security-opt seccomp=unconfined  -e ALLOWED_NETWORKS=0.0.0.0/0
 
 

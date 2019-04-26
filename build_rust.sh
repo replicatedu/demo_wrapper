@@ -46,3 +46,5 @@ mkdir -p dind_image/docker_context
 cp docker_context/executables/* dind_image/docker_context/
 mkdir -p dind_image/dind_images/Coder/docker_context
 cp docker_context/executables/* dind_image/dind_images/Coder/docker_context/
+mkdir -p webshell/docker_context
+cp docker_context/executables/* webshell/docker_context

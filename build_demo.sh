@@ -1,3 +1,8 @@
+#leaves the swarm
+printf "y\n" | docker swarm leave --force
+docker service rm webshell
+docker rmi webshell
+
 # Stop all containers 
 docker stop $(docker ps -a -q)
 # Delete all containers
@@ -14,9 +19,21 @@ cd dind_image
 ./build_dind_coder.sh
 cd ..
 
+docker swarm init
+
 docker run -d -i -t --privileged \
     --name demo_container \
     --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
     class_wrapper /bin/ash
+
+
+#start up the webshell
+docker build -t webshell webshell/.
+sudo docker service create \
+    --name webshell \
+    -p 8018:80 webshell:latest \
+    -d --privileged --security-opt seccomp=unconfined  -e ALLOWED_NETWORKS=0.0.0.0/0
+
+
 
 #sudo docker exec -it  demo_container /bin/ash

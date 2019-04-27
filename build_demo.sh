@@ -1,5 +1,5 @@
 #leaves the swarm
-#printf "y\n" | docker swarm leave --force
+printf "y\n" | docker swarm leave --force
 docker service rm webshell
 docker rmi webshell
 
@@ -19,7 +19,7 @@ cd dind_image
 ./build_dind_coder.sh
 cd ..
 
-docker swarm init
+docker swarm init --advertise-addr $(curl https://ipinfo.io/ip)
 
 sudo docker service create  \
     --name demo_container \

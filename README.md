@@ -28,3 +28,4 @@ Finally build and start the demo
 ```
 ./build_demo.sh
 ```
+Now navigate to the web shell and startup a client ```0.0.0.0:8888```

@@ -29,3 +29,10 @@ Finally build and start the demo
 ./build_demo.sh
 ```
 Now navigate to the web shell and startup a client ```0.0.0.0:8888```
+```
+./client
+```
+...wait for a few and you should start seeing messages with your personal environment
+```
+ip:8001 password E4CWFsKCRmZJMdW48dti4uZchGcRSn ,current sessions 1/10: seconds left: 1800
+```

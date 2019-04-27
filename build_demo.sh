@@ -1,5 +1,5 @@
 #leaves the swarm
-printf "y\n" | docker swarm leave --force
+#printf "y\n" | docker swarm leave --force
 docker service rm webshell
 docker rmi webshell
 

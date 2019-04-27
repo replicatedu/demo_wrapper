@@ -24,12 +24,7 @@ Build run the script that builds all the nessecary platform executables
 #install the nessecary cross compile toolchain
 ./root/.cargo/bin/rustup target add x86_64-unknown-linux-musl
 ```
-Start the docker swarm
-```
-docker swarm init -- --advertise-addr YOUR IP
-```
-
-FIanlly build and start the demo
+Finally build and start the demo
 ```
 ./build_demo.sh
 ```

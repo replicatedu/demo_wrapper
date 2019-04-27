@@ -11,7 +11,7 @@ RUN chmod 777 /home/coder/project/startup_coder.sh
 RUN chmod 777 /home/coder/project/install_docker.sh
 
 RUN sudo apt-get update
-RUN sudo apt install openssh-client openssh-server git curl
+RUN sudo apt install -y openssh-client openssh-server git curl
 
 WORKDIR /home/coder/project
 RUN /bin/bash ./install_docker.sh

@@ -3,7 +3,7 @@ this is a wrapper that will allow a test server to be deployed in one container
 
 # Installation
 
-Instructions for installation of the demo platform are below.  Please note these all assume you are the root user. 
+Instructions for installation of the demo platform are below.  Please note these all assume you are the root user and are installing in ```ubuntu 16.04 x64``` 
 
 To prepare for installation install some dependencies
 ```

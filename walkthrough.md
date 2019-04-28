@@ -45,9 +45,9 @@ And switch back to the student to request a grading of the current assignment
 ```
 cd /tmp/my_repo && replicatedu_student --grade git@github.com:hortinstein/my_repo.git 444a2bc7aae1bc9cce491d284d09fa016c4c9fe752f39244c80dec9ea838b969
 ```
-and switch the student to watch for their grades
+now the students can watch for their grades
 ```
-cd /tmp/test_out/template_solution/ && replicatedu_instructor --grade_daemon
+cd /tmp/test_out/template_solution/ && replicatedu_student --check_grade
 ```
 for a student to get local feedback
 ```

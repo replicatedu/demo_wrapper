@@ -8,11 +8,13 @@ Instructions for installation of the demo platform are below.  Please note these
 To prepare for installation install some dependencies
 ```
 sudo apt-get update
-sudo apt-get install build-essential git musl-tools
+sudo apt-get install build-essential git musl-tools pkg-config
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 curl https://sh.rustup.rs -sSf | sh
 ```
+*You may need to log out and log back in for the rust installation to work at this point* 
+
 Clone the repository
 ```
 git clone https://github.com/replicatedu/demo_wrapper.git
@@ -20,9 +22,9 @@ cd demo_wrapper
 ```
 Build run the script that builds all the nessecary platform executables
 ```
-./build_rust.sh
 #install the nessecary cross compile toolchain
-./root/.cargo/bin/rustup target add x86_64-unknown-linux-musl
+rustup target add x86_64-unknown-linux-musl
+./build_rust.sh
 ```
 Finally build and start the demo
 ```

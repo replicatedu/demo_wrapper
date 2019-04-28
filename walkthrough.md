@@ -16,7 +16,7 @@ The following will walk you through creation of a course.  This will download th
 ```
 replicatedu_instructor --create https://github.com/replicatedu/test_class /tmp/test_out student sol
 ```
-This will create the solution repo and the student repo.  Go into the solution repo and copy the ```sk``` and give it to your students 
+This will create the solution repo and the student repo.  Go into the solution repo and copy the ```sk``` from the ```coord_keys.toml``` and give it to your students 
 [located in a file like this](https://github.com/hortinstein/sol/blob/master/coord_keys.toml)
 
 Now start up the registration deamon by changing to the solution directory and starting the daemon

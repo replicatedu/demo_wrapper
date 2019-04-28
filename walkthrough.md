@@ -1,3 +1,9 @@
+Demo walkthrough
+- remove other repos from personal github
+- Setup 3 windows (2 vs code 1 terminal)
+- Setup credentials in the vs code windows
+- 
+
 
 Setup your github credentials
 ```
@@ -20,7 +26,7 @@ cd /tmp/test_out/template_solution/ && replicatedu_instructor --register_daemon
 
 Now run the following command a student would use
 ```
-replicatedu_student --register https://github.com/hortinstein/student my_repo 46e6bce322eb615340028abb3975459ede8731e893fac65b2ececb7aba44549b
+replicatedu_student --register https://github.com/hortinstein/student my_repo 444a2bc7aae1bc9cce491d284d09fa016c4c9fe752f39244c80dec9ea838b969
 ```
 this creates the student repo and registers the instructors private SSH key so they can pull the assignment.  Check registration with the following command
 
@@ -37,6 +43,13 @@ cd /tmp/test_out/template_solution/ && replicatedu_instructor --grade_daemon
 ```
 And switch back to the student to request a grading of the current assignment
 ```
-cd /tmp/my_repo && replicatedu_student --grade git@github.com:hortinstein/my_repo.git 46e6bce322eb615340028abb3975459ede8731e893fac65b2ececb7aba44549b
+cd /tmp/my_repo && replicatedu_student --grade git@github.com:hortinstein/my_repo.git 444a2bc7aae1bc9cce491d284d09fa016c4c9fe752f39244c80dec9ea838b969
 ```
-
+and switch the student to watch for their grades
+```
+cd /tmp/test_out/template_solution/ && replicatedu_instructor --grade_daemon
+```
+for a student to get local feedback
+```
+test_runner manifest.replicatedu output
+```

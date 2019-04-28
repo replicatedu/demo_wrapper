@@ -1,12 +1,8 @@
-Demo walkthrough
-- remove other repos from personal github
-- Setup 3 windows (2 vs code 1 terminal)
-- Setup credentials in the vs code windows
-- https://github.com/replicatedu/test_class
+A video of this walkthrough https://www.youtube.com/watch?v=h_pLkM34LEQ&t=20s
 
-hello my name is alex hortin and this morning I will be demoing a hosted version of the replicatedu platform.  This platform aims to provide an easy to setup classroom management system and provide the ability to run a course without having to have an always on server setup.  It will allow for secure classroom registration and grading that is fully encrypted and allow instructors to automated the download and grading of their students software and post results.  State for the course (registration/grades/crypto) is held in github issues and encrypted using public key encryption techniques so only the student who needs to see the information does
+The following demos a hosted version of the replicatedu platform.  This platform aims to provide an easy to setup classroom management system and provide the ability to run a course without having to have an always on server setup.  It will allow for secure classroom registration and grading that is fully encrypted and allow instructors to automated the download and grading of their students software and post results.  State for the course (registration/grades/crypto) is held in github issues and encrypted using public key encryption techniques so only the student who needs to see the information does
 
-RIght now this demo is being hosted by a modest digital ocean server, but could be distributed as a virtual machine and used by serveral classes without having to redistribute new programming environments for every student.    
+Right now this demo is being hosted by a modest digital ocean server located here: [http://157.230.84.109:8888/](http://157.230.84.109:8888/), but could be distributed as a virtual machine and used by serveral classes without having to redistribute new programming environments for every student.    
 
 So i will start a new instance of the platform here.  this platform has already been preloaded when the server was built with the three applications that help manage and run a course, the instructor application to handle course creation, grading and registration, the student application where they can register and request grades and the test runner which runs the test framework for the course.  All these applications were built using rust and when polished would be fast, secure easy to maintain in a modular fashion.
 

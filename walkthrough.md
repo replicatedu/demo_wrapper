@@ -20,7 +20,7 @@ cd /tmp/test_out/template_solution/ && replicatedu_instructor --register_daemon
 
 Now run the following command a student would use
 ```
-replicatedu_student --register https://github.com/hortinstein/student my_repo 35849706a4f08ff25e94d33e067cd52b09260469548d0e11b8680111a73737d3
+replicatedu_student --register https://github.com/hortinstein/student my_repo 46e6bce322eb615340028abb3975459ede8731e893fac65b2ececb7aba44549b
 ```
 this creates the student repo and registers the instructors private SSH key so they can pull the assignment.  Check registration with the following command
 
@@ -31,10 +31,12 @@ wait until confirmation.
 
 Now lets start the instructor up in grading mode
 ```
+#make sure you ensure the instructor key is added so you can pull from student repos
+eval `ssh-agent -s` && ssh-add /tmp/test_out/deploy_key
 cd /tmp/test_out/template_solution/ && replicatedu_instructor --grade_daemon
 ```
 And switch back to the student to request a grading of the current assignment
 ```
-replicatedu_student --grade git@github.com:hortinstein/sol.git 35849706a4f08ff25e94d33e067cd52b09260469548d0e11b8680111a73737d3
+cd /tmp/my_repo && replicatedu_student --grade git@github.com:hortinstein/my_repo.git 46e6bce322eb615340028abb3975459ede8731e893fac65b2ececb7aba44549b
 ```
 

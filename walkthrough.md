@@ -56,7 +56,7 @@ cd /tmp/my_repo && replicatedu_student --grade git@github.com:hortinstein/my_rep
 ```
 now the students can watch for their grades
 ```
-cd /tmp/test_out/template_solution/ && replicatedu_student --check_grade
+cd /tmp/my_repo && replicatedu_student --check_grade
 ```
 for a student to get local feedback on their grades they can run the following command that tells them to looks for test files called manifest.replicatedu and output.  
 ```

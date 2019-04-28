@@ -31,11 +31,12 @@ wait until confirmation.
 
 Now lets start the instructor up in grading mode
 ```
+#make sure you ensure the instructor key is added so you can pull from student repos
+eval `ssh-agent -s` && ssh-add /tmp/test_out/deploy_key
 cd /tmp/test_out/template_solution/ && replicatedu_instructor --grade_daemon
 ```
 And switch back to the student to request a grading of the current assignment
 ```
-eval `ssh-agent -s` && ssh-add /tmp/test_out/deploy_key
 cd /tmp/my_repo && replicatedu_student --grade git@github.com:hortinstein/my_repo.git 46e6bce322eb615340028abb3975459ede8731e893fac65b2ececb7aba44549b
 ```
 

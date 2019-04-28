@@ -3,6 +3,8 @@ Setup your github credentials
 ```
 export GITHUB_USERNAME="hortinstein"
 export GITHUB_PASSWORD="******"
+git config --global user.email "me"
+git config --global user.name "done"
 ```
 
 The following will walk you through creation of a course.  This will download the repository that the instrcutor will use to base the class off of
